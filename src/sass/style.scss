@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.Square {
+    position: relative;
+    height: 700px;
+    width: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ddd;
+    overflow: hidden;
+}
+
+.Container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transform: translateX(0%);
+    transition: .5s;
+}
+
+.Page1,
+.Page2,
+.Page3 {
+    position: relative;
+    height: 100%;
+    min-width: 100%;
+}
+
+.Page3 {
+    top: 0;
+    left: 0;
+}
+
+.Nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+
+    &__button {
+        border: 0;
+        font-size: 30px;
+        background-color: transparent;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+
+        &--left {
+            left: 0;
+        }
+
+        &--right {
+            right: 0;
+        }
+    }
+
+}
